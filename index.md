@@ -1,4 +1,6 @@
 # Leona, der strahlende Sonnenaufgang
+> Day breaks upon the battlefield!
+
 ## League Of Legends Champion
 * hat Fähigkeiten
 * Willenskraft
