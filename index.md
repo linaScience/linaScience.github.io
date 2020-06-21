@@ -1,9 +1,11 @@
 # Leona, der strahlende Sonnenaufgang
+> Day breaks upon the battlefield!
+
 ## League Of Legends Champion
 * hat Fähigkeiten
 * Willenskraft
 * Hingabe zu Targon
-* Solari Krigerin mit
+* Solari Kriegerin mit
   * Zenitklinge
   * Schild
 
