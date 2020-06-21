@@ -5,7 +5,7 @@
 * hat Fähigkeiten
 * Willenskraft
 * Hingabe zu Targon
-* Solari Krigerin mit
+* Solari Kriegerin mit
   * Zenitklinge
   * Schild
 
