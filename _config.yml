@@ -99,7 +99,7 @@ ignore:
 ## Themes: https://hexo.io/themes/
 theme: brewski
 theme_config:
-  logo: /me.svg
+  logo: me.png
   copyright:
     since: 2023
     name: Lina Wilske
