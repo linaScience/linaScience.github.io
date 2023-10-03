@@ -4,12 +4,12 @@
 
 # Site
 title: Lina Wilske
-subtitle: ''
+subtitle: 'Computer science student with focus in security'
 description: ''
 keywords:
 author: Lina Wilske
 language: en
-timezone: ''
+timezone: 'Germany'
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
@@ -99,7 +99,7 @@ ignore:
 ## Themes: https://hexo.io/themes/
 theme: brewski
 theme_config:
-  logo: ./me.svg
+  logo: me.svg
   copyright:
     since: 2023
     name: Lina Wilske
