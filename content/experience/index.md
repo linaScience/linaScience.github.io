@@ -22,5 +22,7 @@ Winter term 2023/24: Teaching assistant in the module "Cybersecurity in Practice
 
 ### Trainings
 
-* 2023: creative.minds (Bochum, Germany), CTFem (Helsinki, Finnland), OBTS v6.0 (Marbella, Spain)
+* October 2023: OBTS v6.0 (Marbella, Spain)
+* June 2023: CTFem (Helsinki, Finnland)
+* March 2023: creative.minds (Bochum, Germany)
 * HTB and THM: various courses
