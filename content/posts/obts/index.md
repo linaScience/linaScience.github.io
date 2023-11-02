@@ -1,5 +1,5 @@
 +++
-title = 'OBTS preparation'
+title = 'OBTS training'
 date = 2023-10-04T13:50:06+02:00
 +++
 
@@ -13,7 +13,7 @@ I am taking part in the "Practical iOS App, User-, and Kernel-Space Reverse-Engi
 We started the day with taking a look into the basics of reverse engineering of iOS devices. In particular, we looked at the [Apple Developer API](https://developer.apple.com/documentation/technologies) and talked about which framework could be used to implement a VPN on iOS (hint: it's the [Network Extension](https://developer.apple.com/documentation/networkextension)).
 
 After this we were setting up our lab. Fortunately, I got a jailbroken iPhone 8 with iOS 16.4.1 from the instructors since I hadn't a spare one to jailbreak.
-For the tooling to reverse an iOS Application I use my ARM Mac with several tools:
+For the tooling to reverse an iOS Application I use my ARM Mac with the following tools:
 
 * `ghidra` (`brew install --cask --no-quarantine ghidra`)
 * `swift` (part of Xcode)
@@ -82,7 +82,7 @@ Unfortunately, for iOS 16 they changed the crash log format and we were not able
 
 ### GCD
 
-GCD stands for Grand Central Dispatch. It's Apple's implementation of threads. It's a thread pool with a queue. You can add tasks to the queue and the GCD will execute them.
+GCD stands for Grand Central Dispatch, and it's Apple's implementation of threads. It's a thread pool with a queue. You can add tasks to the queue and the GCD will execute them.
 We tried to follow along the threads and wrote a hook for the `dispatch_async` function:
 
 ```javascript
@@ -112,4 +112,43 @@ Interceptor.attach(_dispatch_async_addr, {
 
 Now, every time we click a button in the application, we get a backtrace of the thread which executed the function.
 
-We ended with a static analysis of it in ghidra.
+We ended with a static analysis of this in ghidra.
+
+## Day 3
+
+Today we've done a lot of low level stuff.
+
+### XPC and Mach Ports
+
+First we dived into XPC which is Cross Process Communication in iOS and macOS.
+Processes like apps, daemons etc. can exchange messages through XPC.
+It's the default communication path, although another may exist.
+Permissions are managed by `launchd`, which starts the processes if needed and bootstraps the underlying Mach ports for XPC.
+Each Mach port has one send and one receive right. Each process can create a port and hand over the send right to another process. The receiving process can then receive messages from the port.
+
+We used `xpcspy` to take a look into the XPC traffic of the `WeiaGuard` application and listed the Mach ports with the `lsmp` command. We needed to find out the process ID of the `WeiaGuard` application, and then we could list the ports with `lsmp -p <pid>`.
+
+Mach ports and messages are very powerful primitives to build an RPC mechanism into the kernel, because the Mach ports are handles to kernel objects.
+
+### Kernel
+
+The next step would be to get into the kernel, because Mach ports and messages are very powerful primitives to build an RPC mechanism into the kernel, because Mach ports are handles to kernel objects.
+In general, there is MIG, the Mach Interface Generator, which is a tool to generate the RPC code for the kernel.
+
+We than looked into some BSD syscalls and Mach messages in the XNU Source code in groups of three and discussed them in the big group.
+
+After that, we unpacked the kernelcache of a restored iPhone with `pyimg4` and extracted the full kernel cache with `kextex`.
+
+## IOKit
+
+IOKit is a driver framework for iOS and macOS. It's a C++ framework and is used to communicate with the kernel based on Mach messages.
+The user-spaced and kernel-spaced part of IOKit is open-source and documented. Unfortunately, the drivers are not open-source and not documented.
+Therefore, we looked into a driver of the `WeiaGuard` application, and loaded the kext `com.apple.driver.AppleJPEGDriver`, which is used by the app, into ghidra.
+
+## Co-processors
+
+We also talked a bit about different co-processors on iPhones, and there are many, like the cellular baseband chips from intel or wireless combo chips from Broadcom for Wi-Fi and Bluetooth.
+But since the new iPhones Apple also started to produce their own wireless co-processors.
+
+And that's the training.
+I was able to learn a lot and I am looking forward to the conference days.
