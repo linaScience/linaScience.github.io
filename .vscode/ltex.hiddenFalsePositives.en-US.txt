@@ -1,2 +1,0 @@
-{"rule":"A_INFINITIVE","sentence":"^\\QEach process can create a port and hand over the send right to another process.\\E$"}
-{"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\QWe than looked into the definitions of BSD syscalls and Mach messages.\\E$"}
