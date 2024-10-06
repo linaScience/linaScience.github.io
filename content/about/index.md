@@ -1,6 +1,11 @@
 +++
-title = 'About'
-date = 2023-10-04T13:42:44+02:00
+title = 'About me'
 +++
 
-My name’s Lina Wilske and I am a computer science student @ HPI, focusing on security. I am deepening my knowledge as a teaching assistant and tutor in the module “iOS & Android Internals” and conducting research in the field of Mobile Security at the research group of Jiska Classen. In my leisure time, I participate in CTFs with the Platypwnies, the CTF team of our Cybersecurity club.
+![Me](fol_lina_rect.png)
+
+I’m Lina, a master’s student in the computer science program at the Hasso Plattner Institute, with a focus on mobile forensics and security. My research is centered around mobile forensics, and I’ve had the privilege of conducting it under the guidance of Dr. Jiska Classen, specializing in exploring the inner workings of iOS and Android devices.
+
+In addition to research, I also tutor fellow students in subjects like mobile security, iOS and Android internals, and Cybersecurity in Practice. Teaching allows me to solidify my knowledge while helping others grasp these critical concepts.
+
+Beyond academia, I lead the Cybersecurity Club at my university, where I organize and participate in Capture The Flag (CTF) competitions. This experience has given me hands-on exposure to the dynamic world of cybersecurity, and I’m always excited to learn more through these challenges.

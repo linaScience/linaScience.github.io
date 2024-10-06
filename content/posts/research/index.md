@@ -1,7 +1,12 @@
 +++
 title = 'Research'
-date = 2023-10-04T14:42:44+02:00
 +++
+
+## Talks
+
+OBTSv7.0: [Unraveling Time: Understanding Time Formats in iOS Sysdiagnose for Security Forensics](https://objectivebythesea.org/v7/talks.html)
+
+## Thesis
 
 [Bachelor's thesis: Machine Learning-based User Movement Prediction in Layer 2 Networks](https://github.com/linaScience/ba)
 
