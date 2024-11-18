@@ -8,4 +8,4 @@ I’m Lina, a master’s student in the computer science program at the Hasso Pl
 
 In addition to research, I also tutor fellow students in subjects like mobile security, iOS and Android internals, and Cybersecurity in Practice. Teaching allows me to solidify my knowledge while helping others grasp these critical concepts.
 
-Beyond academia, I lead the Cybersecurity Club at my university, where I organize and participate in Capture The Flag (CTF) competitions. This experience has given me hands-on exposure to the dynamic world of cybersecurity, and I’m always excited to learn more through these challenges.
+Beyond academia, I lead the Cybersecurity Club at my university, where I organize and participate in Capture The Flag (CTF) competitions. This has given me hands-on experience to the dynamic world of cybersecurity, and I’m always excited to learn more through these challenges.
